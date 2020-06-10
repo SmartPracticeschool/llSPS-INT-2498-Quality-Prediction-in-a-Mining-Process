@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>iron prediction</title>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+<style>
+.login{
+top: 20%;
+}
+</style>
+</head>
+<body>
+    <div class="login">
+    <h1>Quality Prediction In Mining Process</h1>
+   <form action="{{ url_for('y_predict')}}"method="post">
+   <input type="text" name="Iron_Feed" placeholder="iron_feed" required="required"/><br><br>
+   <input type="text" name="silica_feed" placeholder="silica_feed" required="required"/><br><br>
+   <input type="text" name="starch_flow" placeholder="starch_flow" required="required"/><br><br>
+   <input type="text" name="Amina_Flow" placeholder="Amina_flow" required="required"/><br><br>
+   <input type="text" name="Ore_pulp_flow" placeholder="ore_pulp_flow" required="required"/><br><br>
+   <input type="text" name="ore_Plup_pH" placeholder="ore_Pulp_pH" required="required"/><br><br>
+   <input type="text" name="ore_pulp_density" placeholder="ore_pulp_density" required="required"/><br><br>
+   <input type="text" name="flotation_column_04_air_flow" placeholder="flotation_column_04_air_flow" required="required"/><br><br>
+   <input type="text" name="flotation_column_05_air_flow" placeholder="flotation_column_05_air_flow" required="required"/><br><br>
+    <input type="text" name="flotation_column_06_air_flow" placeholder="flotation_column_06_air_flow" required="required"/><br><br>
+    <input type="text" name="flotation_column_07_air_flow" placeholder="flotation_column_07_air_flow" required="required"/><br><br>
+    <input type="text" name="flotation_column_04_Level" placeholder="flotation_column_04_level" required="required"/><br><br>
+    <input type="text" name="flotation_column_05_Level" placeholder="flotation_column_05_level" required="required"/><br><br>
+    <input type="text" name="flotation_column_06_Level" placeholder="flotation_column_06_level" required="required"/><br><br>
+    <input type="text" name="flotation_column_07_Level" placeholder="flotation_column_07_level" required="required"/><br><br>
+    <input type="text" name="iron_concrete" placeholder="iron_concrete" required="required"/><br><br>    
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+    <br>
+    <br>
+    {{prediction_text}}
+    </div>
+    </center>
+    </body>
+</html>
